@@ -1,7 +1,6 @@
 import { useGLTF } from "@react-three/drei";
-import { useLoader } from "@react-three/fiber";
 import { Suspense } from "react";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { RoomJSX } from "./RoomJSX";
 
 const Room = () => {
   const room = useGLTF("./models/room/room-opt.glb");
@@ -9,7 +8,10 @@ const Room = () => {
   return (
     <mesh>
       <Suspense>
-        <primitive object={room.scene.scale.set(0.01, 0.01, 0.01)} />
+        <mesh scale={0.01}>
+          <RoomJSX />
+        </mesh>
+        {/* <primitive object={room.scene.scale.set(0.01, 0.01, 0.01)} /> */}
       </Suspense>
     </mesh>
   );

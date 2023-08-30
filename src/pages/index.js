@@ -23,14 +23,14 @@ export default function Home() {
         shadows
         camera={{ position: [3, 3, 3] }}
       >
-        <color attach="background" args={["#191920"]} />
-        <fog attach="fog" args={["#191920", 0, 30]} />
-        <hemisphereLight intensity={10} />
+        {/* <color attach="background" args={["#191920"]} /> */}
+        {/* <fog attach="fog" args={["#191920", 0, 30]} /> */}
+        <hemisphereLight intensity={3} />
         <OrbitControls />
-        <Center top>
-          {/* <BoxModel /> */}
-          <Room />
-        </Center>
+        {/* <Center top> */}
+        {/* <BoxModel /> */}
+        <Room />
+        {/* </Center> */}
         <Ground />
       </Canvas>
     </div>
