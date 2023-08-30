@@ -12,6 +12,7 @@ import BoxModel from "@/Components/UI/Background/Models/BoxModel";
 import Ground from "@/Components/UI/Ground";
 import CustomControlers from "@/Components/UI/Controlers";
 import Room from "@/Components/UI/Background/Models/Room";
+import Configurator from "@/Components/UI/Configurator";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,12 +28,10 @@ export default function Home() {
         {/* <fog attach="fog" args={["#191920", 0, 30]} /> */}
         <hemisphereLight intensity={3} />
         <OrbitControls />
-        {/* <Center top> */}
-        {/* <BoxModel /> */}
         <Room />
-        {/* </Center> */}
         <Ground />
       </Canvas>
+      <Configurator />
     </div>
   );
 }
