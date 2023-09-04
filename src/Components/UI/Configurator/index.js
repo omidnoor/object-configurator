@@ -1,6 +1,10 @@
+import useStore from "@/store/store";
 import styles from "./styles.module.scss";
+import { Button } from "primereact/button";
 
 const Configurator = () => {
+  const selected = useStore((state) => state.selected);
+  const setSelected = useStore((state) => state.setSelected);
   return (
     <div className={styles.config}>
       <div className={styles.config__section}>
@@ -11,13 +15,28 @@ const Configurator = () => {
           </div>
           <div className={styles.items}>
             <div className={styles.item}>
-              <div className={styles.item__label}>Walnut</div>
+              <Button
+                className={styles.item__label}
+                onClick={() => setSelected("walnut")}
+              >
+                Walnut
+              </Button>
             </div>
             <div className={styles.item}>
-              <div className={styles.item__label}>Oak</div>
+              <Button
+                className={styles.item__label}
+                onClick={() => setSelected("oak")}
+              >
+                Oak
+              </Button>
             </div>
             <div className={styles.item}>
-              <div className={styles.item__label}>Santos Mahogany</div>
+              <Button
+                className={styles.item__label}
+                onClick={() => setSelected("mahogany")}
+              >
+                Santos Mahogany
+              </Button>
             </div>
           </div>
         </div>
